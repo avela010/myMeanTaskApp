@@ -1,0 +1,24 @@
+<a class="btn btn-primary" href="#!/create/task"><span class="glyphicon glyphicon-plus"> Create Task</span></a>
+<br>
+<table class="table table-striped">
+	<thead>
+		<th>Title</th>
+		<th>URL</th>
+		<th>Operations</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="task in vm.tasks">
+		<td><a ng-href="#!/task/{{task._id}}">{{task.title}}</a></td>
+		<td>{{task.url}}</td>
+		<td>
+			<div class="button-group">
+				<a ng-href="#!/task/{{task._id}}/edit" class="btn btn-default">
+					<span class="glyphicon glyphicon-edit"></span>
+				</a>
+				<a ng-href="#!/task/{{task._id}}/delete" class="btn btn-danger">
+					<span class="glyphicon glyphicon-remove-circle"></span>
+				</a>
+			</div>
+		</td>
+	</tbody>
+</table>

@@ -1,0 +1,12 @@
+<form role="form">
+	<div class="form-group">
+		<label for="title" class="control-label">Title</label>
+		<input type="text" ng-model="vm.task.title" class="form-control" id="title" placeholder="Enter the task title"/>
+	</div>
+	<div class="form-group">
+		<label for="title" class="control-label">URL</label>
+		<input type="text" ng-model="vm.task.url" class="form-control" id="title" placeholder="Enter the Youtube URL"/>
+	</div>
+	<input type="submit" class="btn btn-primary" ng-disabled="!(vm.task.url && vm.task.title)" ng-click="vm.saveTask()" value="save"/>
+	<button ng-click="vm.back()" type="button" class="btn btn-default">Back</button>
+</form>
